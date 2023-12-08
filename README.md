@@ -40,10 +40,10 @@ Facilita a identificação e visualização dos contratos em rascunho, permitind
 
 ## Tecnologias Utilizadas
 
-- Frontend: [Android]
-- Backend: [Java / Kotlin]
-- Banco de Dados: [MySQL]
-- Outras tecnologias: [Figma]
+- Frontend: Android
+- Backend: Java / Kotlin
+- Banco de Dados: MySQL
+- Outras tecnologias: Figma
 
 ## Contribuições
 
