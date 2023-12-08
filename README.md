@@ -32,7 +32,7 @@ Fornece uma lista de pendências associadas a cada contrato, permitindo que o co
 
 ### 7. Envio de Documentos Pendentes do Contrato
 
-Permite que o contratado envie documentos pendentes diretamente através da plataforma, simplificando o processo de resolução de pendências e garantindo a integridade da documentação.
+Permite que o contratado envie documentos pendentes através da plataforma, podendo resolver as pendências posteriormente.
 
 ### 8. Visualização de Contratos em Rascunho
 
