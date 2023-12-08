@@ -29,10 +29,7 @@
         android:textSize="50dp"
         android:layout_marginLeft="10dp"
         app:layout_constraintStart_toStartOf="parent"
-
-        app:layout_constraintTop_="parent"
-        app:layout_constraintTop_toBottomOf="@id/textOla"
-        app:layout_constraintBottom_toBottomOf="" />
+        app:layout_constraintTop_toBottomOf="@id/textOla" />
 
     <TextView
         android:id="@+id/descricao"
@@ -41,6 +38,7 @@
         android:layout_marginLeft="10dp"
         android:text="Insira seus dados para gerenciar seus contratos ativos"
         app:layout_constraintTop_toBottomOf="@id/textBemvindo"
+        android:textColor="@color/black"
         android:textSize="20dp"
         />
 
@@ -51,6 +49,11 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:hint="Digite seu email"
+        android:textColor="@color/black"
+        android:background="@drawable/custom_edit_text"
+        android:textColorHint="@color/black"
+        android:padding="10dp"
+
         android:inputType="text"
         app:layout_constraintTop_toBottomOf="@+id/descricao"/>
     <EditText
@@ -58,19 +61,37 @@
         android:layout_width="match_parent"
         android:layout_marginHorizontal="10dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="20dp"
+        android:padding="10dp"
         android:hint="Digite sua senha"
+        android:background="@drawable/custom_edit_text"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+
         android:inputType="textPassword"
         app:layout_constraintTop_toBottomOf="@id/inputEmail"/>
+
+    <TextView
+        android:id="@+id/linkEsqueceSenha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/inputSenha"
+        android:textColor="@color/blue_primary"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:text="Esqueceu a senha?"/>
+
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/inputSenha"
-        android:layout_marginTop="15dp"
+        app:layout_constraintTop_toBottomOf="@id/linkEsqueceSenha"
+        android:layout_marginTop="30dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:background="@color/blue_primary"
+
         android:text="Entrar"/>
 
 
