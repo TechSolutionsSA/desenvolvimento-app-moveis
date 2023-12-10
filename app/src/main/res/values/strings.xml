@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">gerenciador-contratos</string>
     <string name="title_activity_forget_password">ForgetPassword</string>
+    <string name="title_activity_home">HomeActivity</string>
 </resources>
