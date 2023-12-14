@@ -13,6 +13,13 @@ class HomeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = HomeLayoutBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+    }
+
+    private fun AddEventContractActive(){
+        binding.botaoAtivos.setOnClickListener{
+
+        }
     }
 }
 

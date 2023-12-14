@@ -26,10 +26,15 @@
             android:name=".features.forgetPassword.ForgetPassword"
             android:exported="false"
             android:theme="@style/Theme.AppCompat.Light" />
-
         <activity
             android:name=".features.home.HomeActivity"
             android:exported="false"
+            android:theme="@style/Theme.AppCompat.Light" />
+
+        <activity
+            android:name=".features.active_contract.ActiveContractActivity"
+            android:exported="false"
+            android:label="@string/title_activity_active_contract"
             android:theme="@style/Theme.AppCompat.Light" />
     </application>
 
