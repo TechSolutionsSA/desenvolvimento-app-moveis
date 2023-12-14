@@ -4,5 +4,4 @@ import androidx.appcompat.app.AppCompatActivity
 
 
 class ActiveContractActivity : AppCompatActivity() {
-
 }
