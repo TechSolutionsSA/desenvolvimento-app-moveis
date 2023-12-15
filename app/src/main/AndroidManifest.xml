@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -26,11 +28,24 @@
             android:name=".features.forgetPassword.ForgetPassword"
             android:exported="false"
             android:theme="@style/Theme.AppCompat.Light" />
-
         <activity
             android:name=".features.home.HomeActivity"
             android:exported="false"
             android:theme="@style/Theme.AppCompat.Light" />
+
+        <activity android:name=".features.ContratosAtivos.ContratosaAtivosActivity"
+            android:exported="false"/>
+
+
+        <activity android:name=".features.contratosVencidos.ContratosVencidosActivity"
+            android:exported="false"/>
+
+            <activity android:name=".features.ContratosPendentes.ContratosPendentesActivity"
+                android:exported="false"/>
+
+        <activity android:name=".features.todosContratos.TodosContratosActivity"
+            android:exported="false"/>
+
     </application>
 
 </manifest>
