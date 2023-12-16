@@ -1,42 +1,68 @@
 package com.example.gerenciador_contratos.features.ContratosPendentes
 
 import android.os.Bundle
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.gerenciador_contratos.R
 import com.example.gerenciador_contratos.adapter.ContratoAdapter
 import com.example.gerenciador_contratos.data.models.Contrato
-import com.example.gerenciador_contratos.client.RetrofitClient
+import com.example.gerenciador_contratos.databinding.ContractActiveListBinding
+import com.example.gerenciador_contratos.features.active_contract.adapter.ActiveContractAdapter
+import com.example.gerenciador_contratos.features.contratosVencidos.ContratosVencidosViewModel
+import com.example.gerenciador_contratos.network.RetrofitClient
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
 class ContratosPendentesActivity : AppCompatActivity() {
 
-    private lateinit var recyclerView: RecyclerView
-    private lateinit var contratoAdapter: ContratoAdapter
+    private lateinit var binding: ContractActiveListBinding
+    private lateinit var contracts: ArrayList<Contrato>
+    private lateinit var adapter: ActiveContractAdapter
+    private val viewModel = ContratosPendentesViewModel()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_contratos_pendentes)
+        binding = ContractActiveListBinding.inflate(layoutInflater)
+        binding.Titulo.text = binding.root.context.getString(R.string.stringName, "Contratos Pendentes")
+        setContentView(binding.root)
+        setUpList()
+        setUpObservables()
+        viewModel.getContratosPendentes()
+    }
 
-        recyclerView = findViewById(R.id.recyclerViewContratosPendentes)
-        recyclerView.layoutManager = LinearLayoutManager(this)
+    private fun changeElementsVisibility(emptyMessageVisibility: Int = View.GONE,
+                                         errorMessageVisibility: Int = View.GONE){
+        binding.emptyMensage.visibility = emptyMessageVisibility
+        binding.errorMessage.visibility = errorMessageVisibility
 
-        RetrofitClient.apiService.getContratosPendentes().enqueue(object : Callback<List<Contrato>> {
-            override fun onResponse(call: Call<List<Contrato>>, response: Response<List<Contrato>>) {
-                if (response.isSuccessful) {
-                    val contratos = response.body() ?: emptyList()
-                    contratoAdapter = ContratoAdapter(contratos)
-                    recyclerView.adapter = contratoAdapter
-                } else {
-                }
+    }
+
+    private fun setUpObservables(){
+        viewModel.contratos.observe(this){
+            contracts.clear()
+            contracts.addAll(it)
+            adapter.notifyDataSetChanged()
+        }
+        viewModel.empty.observe(this){
+            if (it){
+                changeElementsVisibility(emptyMessageVisibility = View.VISIBLE)
             }
-
-            override fun onFailure(call: Call<List<Contrato>>, t: Throwable) {
+        }
+        viewModel.error.observe(this){
+            if (it){
+                changeElementsVisibility(errorMessageVisibility = View.VISIBLE)
             }
-        })
+        }
+
+    }
+    private fun setUpList(){
+        contracts = arrayListOf()
+        adapter = ActiveContractAdapter(contracts)
+        binding.listaContratosAtivos.layoutManager = LinearLayoutManager(this)
+        binding.listaContratosAtivos.adapter = adapter
     }
 
 }

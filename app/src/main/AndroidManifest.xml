@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
-
+    <uses-permission android:name="android.permission.INTERNET"/>
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -31,9 +31,9 @@
         <activity
             android:name=".features.home.HomeActivity"
             android:exported="false"
-            android:theme="@style/Theme.AppCompat.Light" />
+            android:theme="@style/Theme.AppCompat.GerenciadorContratos" />
 
-        <activity android:name=".features.ContratosAtivos.ContratosaAtivosActivity"
+        <activity android:name=".features.active_contract.ActiveContractActivity"
             android:exported="false"/>
 
 

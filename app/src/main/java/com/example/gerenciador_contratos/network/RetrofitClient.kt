@@ -1,4 +1,4 @@
-package com.example.gerenciador_contratos.client
+package com.example.gerenciador_contratos.network
 
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory

@@ -12,6 +12,5 @@ class ForgetPassword : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ForgetPasswordLayoutBinding.inflate(layoutInflater);
         setContentView(binding.root)
-
     }
 }

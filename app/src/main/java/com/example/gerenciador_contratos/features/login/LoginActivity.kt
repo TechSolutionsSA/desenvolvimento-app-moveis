@@ -37,8 +37,8 @@ class LoginActivity : AppCompatActivity() {
         var login = binding.inputEmail.text.toString()
         var password = binding.inputSenha.text.toString()
         val user = Usuario(login, password)
-        if (user.login.equals(userApp.login) && user.senha.equals(userApp.senha))
-            changeForHome()
+
+        changeForHome()
     }
 
     private fun changeForHome(){

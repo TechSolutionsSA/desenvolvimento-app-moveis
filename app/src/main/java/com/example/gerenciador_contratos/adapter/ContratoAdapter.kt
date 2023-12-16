@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.gerenciador_contratos.R
 import com.example.gerenciador_contratos.data.models.Contrato
 
-class ContratoAdapter(private val contratos: List<Contrato>) : RecyclerView.Adapter<ContratoAdapter.ViewHolder>() {
+class ContratoAdapter(private val contratos: ArrayList<Contrato>) : RecyclerView.Adapter<ContratoAdapter.ViewHolder>() {
 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val textViewAssunto: TextView = view.findViewById(R.id.textViewAssunto)
@@ -24,9 +24,7 @@ class ContratoAdapter(private val contratos: List<Contrato>) : RecyclerView.Adap
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val contrato = contratos[position]
-        holder.textViewAssunto.text = contrato.assunto
-        holder.textViewEmpresa.text = "Empresa: ${contrato.empresa}"
-        holder.textViewDataValidade.text = "Validade: ${contrato.dataValidade}"
+
     }
 
     override fun getItemCount() = contratos.size
