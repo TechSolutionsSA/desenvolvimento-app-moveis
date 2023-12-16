@@ -12,11 +12,11 @@ Permite que os contratados acessem o sistema através de credenciais específica
 
 ### 2. Visualização do Prazo Final do Contrato
 
-Os contratados podem visualizar claramente o prazo final de seus contratos, proporcionando uma gestão eficaz do tempo e a prevenção de possíveis problemas relacionados a prazos expirados.
+Os contratados poderá visualizar claramente o prazo final de seus contratos, proporcionando uma gestão eficiente do tempo e a prevenção de possíveis problemas relacionados a prazos expirados.
 
-### 3. Visualização do Número de Contratos Ativos
+### 3. Visualização da Quantidade de Contratos Ativos
 
-Oferece uma visão geral do número de contratos ativos que o contratado possui em conjunto com a secretaria.
+Oferece uma visão geral das quantidades de contratos ativos que o contratado possui em conjunto com a secretaria.
 
 ### 4. Visualização das Alterações no Contrato
 
