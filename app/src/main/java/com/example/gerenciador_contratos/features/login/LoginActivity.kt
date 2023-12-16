@@ -3,6 +3,8 @@ package com.example.gerenciador_contratos.features.login
 import android.content.Intent
 import android.os.Bundle
 import android.os.PersistableBundle
+import android.window.SplashScreen
+import android.window.SplashScreenView
 import androidx.appcompat.app.AppCompatActivity
 import com.example.gerenciador_contratos.data.models.Usuario
 import com.example.gerenciador_contratos.databinding.LoginLayoutBinding
@@ -15,7 +17,7 @@ class LoginActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = LoginLayoutBinding.inflate(layoutInflater);
+        binding = LoginLayoutBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         binding.linkEsqueceSenha.setOnClickListener{

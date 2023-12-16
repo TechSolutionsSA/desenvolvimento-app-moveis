@@ -10,31 +10,42 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.AppCompat.Light"
-        tools:targetApi="31">
+        android:theme="@style/Theme.AppCompat.GerenciadorContratos"
+        tools:targetApi="34">
 
         <activity
             android:name=".features.login.LoginActivity"
             android:exported="true">
             <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
 
-                <action android:name="android.intent.action.MAIN" />
+
             </intent-filter>
         </activity>
         <activity
             android:name=".features.forgetPassword.ForgetPassword"
             android:exported="false"
             android:theme="@style/Theme.AppCompat.Light" />
+
         <activity
             android:name=".features.home.HomeActivity"
             android:exported="false"
             android:theme="@style/Theme.AppCompat.Light" />
 
-        <activity
-            android:name=".features.active_contract.ActiveContractActivity"
-            android:exported="false"
-            android:theme="@style/Theme.AppCompat.Light" />
+        <activity android:name=".features.ContratosAtivos.ContratosaAtivosActivity"
+            android:exported="false"/>
+
+
+        <activity android:name=".features.contratosVencidos.ContratosVencidosActivity"
+            android:exported="false"/>
+
+            <activity android:name=".features.ContratosPendentes.ContratosPendentesActivity"
+                android:exported="false"/>
+
+        <activity android:name=".features.todosContratos.TodosContratosActivity"
+            android:exported="false"/>
+
     </application>
 
 </manifest>

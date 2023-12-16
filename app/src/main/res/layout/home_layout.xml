@@ -5,6 +5,7 @@
     android:layout_height="match_parent"
     android:background="@color/gray_primary"
     tools:context=".features.home.HomeActivity"
+    android:theme="@style/Theme.AppCompat.Light"
     >
 
     <View

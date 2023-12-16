@@ -3,6 +3,15 @@
 
     <style name="Theme.Gerenciadorcontratos" parent="android:Theme.Material.Light.NoActionBar" />
 
+    <style name="Theme.AppCompat.GerenciadorContratos" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/blue_primary</item>
+
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+
+
+    </style>
+
     <style name="Theme.AppCompat" parent="android:Theme.Material.Light.NoActionBar" />
 
     <style name="Theme.AppCompat.Light" parent="android:Theme.Material.Light.NoActionBar" />

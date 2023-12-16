@@ -3,4 +3,7 @@
     <string name="title_activity_forget_password">ForgetPassword</string>
     <string name="title_activity_home">HomeActivity</string>
     <string name="title_activity_active_contract">ActiveContractActivity</string>
+    <string name="NumeroContrato">Número do contrato: %s</string>
+    <string name="DataDeValidade">Data de Validade: %s</string>
+    <string name="ValorTotal">Valor total do Contrato: %s</string>
 </resources>
