@@ -7,7 +7,6 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.gerenciador_contratos.R
 import com.example.gerenciador_contratos.data.models.Contrato
-import com.example.gerenciador_contratos.adapter.ContratoAdapter
 import com.example.gerenciador_contratos.databinding.ContractActiveListBinding
 import com.example.gerenciador_contratos.features.active_contract.ActiveContractActivity
 import com.example.gerenciador_contratos.features.active_contract.adapter.ActiveContractAdapter
